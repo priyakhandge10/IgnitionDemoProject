@@ -1,0 +1,250 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "name": "Perspective",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HR1025",
+          "name": "Tank",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[Koyo]_Meta:[Diagnostics]/Is Connected",
+          "dataType": "Boolean",
+          "name": "Is Connected",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HR1025",
+          "name": "slider",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "KoyoTags",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HR2565",
+          "historyProvider": "SQLite",
+          "name": "IntegerOutput",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HR2561",
+          "name": "IntegerInput",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[Koyo]_Meta:[Diagnostics]/Is Connected",
+          "dataType": "Boolean",
+          "name": "Is Connected",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HRF2569",
+          "dataType": "Float4",
+          "name": "FloatInput",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HR1025",
+          "engHigh": 100.0,
+          "alarms": [
+            {
+              "setpointA": 30.0,
+              "mode": "BelowValue",
+              "name": "KoyoLowSlider",
+              "label": "Below 30",
+              "displayPath": "LowSlider"
+            },
+            {
+              "mode": "AboveValue",
+              "setpointA": 70.0,
+              "setpointB": 70.0,
+              "name": "KoyoHighSlider",
+              "label": "Above 70",
+              "priority": "Low",
+              "displayPath": "HighSlider"
+            }
+          ],
+          "tagType": "AtomicTag",
+          "historyProvider": "SQLite",
+          "dataType": "Float4",
+          "name": "Slider",
+          "historyEnabled": true,
+          "sampleMode": "Periodic",
+          "historySampleRate": 5.0,
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]HRF2577",
+          "dataType": "Float4",
+          "historyProvider": "SQLite",
+          "name": "FloatOuput",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]C3074",
+          "dataType": "Boolean",
+          "name": "Bit",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[Koyo]c2049",
+          "dataType": "Boolean",
+          "historyProvider": "SQLite",
+          "alarms": [
+            {
+              "mode": "Bit",
+              "bitOnZero": true,
+              "bitPosition": 0,
+              "name": "OFF",
+              "label": "OFF",
+              "displayPath": "Indicator"
+            },
+            {
+              "mode": "Bit",
+              "bitOnZero": false,
+              "name": "ON",
+              "label": "ON",
+              "priority": "Low",
+              "displayPath": "Indicator",
+              "ackNotesReqd": true,
+              "setpointA": {
+                "bindType": "Tag",
+                "value": ""
+              },
+              "bitPosition": {
+                "bindType": "Tag",
+                "value": ""
+              }
+            }
+          ],
+          "name": "Coil",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder"
+    },
+    {
+      "name": "SiemensTags",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]MREAL400",
+          "dataType": "Float4",
+          "name": "FInput",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]Mx100.0",
+          "dataType": "Boolean",
+          "name": "Bit",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]Qx0.0",
+          "dataType": "Boolean",
+          "historyProvider": "SQLite",
+          "name": "Coil",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]MW202",
+          "historyProvider": "SQLite",
+          "name": "IntegerOutput",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "ns\u003d1;s\u003d[S7_1200]_Meta:[Diagnostics]/Is Connected",
+          "dataType": "Boolean",
+          "name": "Is Connected",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]MW200",
+          "name": "IntegerInput",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]MW204",
+          "dataType": "Int4",
+          "alarms": [
+            {
+              "mode": "AboveValue",
+              "setpointA": 80.0,
+              "name": "S7AboveSlider",
+              "label": "Above 80"
+            },
+            {
+              "mode": "BelowValue",
+              "setpointA": 30.0,
+              "name": "S7BelowSlider",
+              "label": "Below 30"
+            }
+          ],
+          "name": "Slider",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "valueSource": "opc",
+          "opcItemPath": "[S7_1200]MREAL404",
+          "dataType": "Float4",
+          "historyProvider": "SQLite",
+          "name": "FOutput",
+          "historyEnabled": true,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    }
+  ]
+}
